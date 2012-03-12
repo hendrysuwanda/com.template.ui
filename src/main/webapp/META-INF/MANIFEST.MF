@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Specification-Title: com.template.ui
+Specification-Version: 0.0.1-SNAPSHOT
+Implementation-Title: com.template.ui
+Implementation-Version: 0.0.1-SNAPSHOT

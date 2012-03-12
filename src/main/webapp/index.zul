@@ -1,0 +1,43 @@
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" ?>
+
+<zk>
+	<hlayout>
+		<div id="personDiv" apply="com.template.ui.controller.PersonController">
+			<vbox>
+				<listbox id="personList" width="450px" height="300px">
+					<listhead>
+						<listheader width="50px" label="id" sort="auto(id)" />
+						<listheader width="250px" label="first_name" sort="auto(firstName)" />
+						<listheader width="140px" label="last_name" sort="auto(lastName)" />
+					</listhead>
+				</listbox>
+				
+				<grid id="editPersonGrid" width="450px">
+					<auxhead>
+						<auxheader colspan="2" label="Add/Edit Person Info" />
+					</auxhead>
+					<columns visible="false">
+						<column width="50px" />
+						<column width="250px" />
+						<column width="140px" />
+					</columns>
+					<rows>
+						<row>
+							<cell><intbox width="50px" value="@{personDiv$composer.person.id}" disabled="true" /></cell>
+							<cell><textbox width="250px" value="@{personDiv$composer.person.firstName}" /></cell>
+							<cell><textbox width="140px" value="@{personDiv$composer.person.lastName}" /></cell>
+						</row>
+						<row>
+							<cell colspan="4" align="center">
+								<button id="createPerson" label="add" /><space spacing="10px"/>
+								<button id="updatePerson" label="update" disabled="true"/><space spacing="10px"/>
+								<button id="deletePerson" label="delete" disabled="true"/>
+								<button id="resetPerson" label="reset" />
+							</cell>
+						</row>
+					</rows>
+				</grid>
+			</vbox>
+		</div>
+	</hlayout>
+</zk>
