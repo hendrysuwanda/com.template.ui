@@ -1,1 +1,3 @@
 Project template web app menggunakan zkoss, hibernate & springframework
+
+project ini dependency ke https://github.com/hendrysuwanda/com.template.model
